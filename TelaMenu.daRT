@@ -16,10 +16,14 @@ class _TelaMenu extends State<TelaMenu> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            const SizedBox(height: 65),
+
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('assets/imagem.png', width: 100),
+                const SizedBox(width: 50),
                 ElevatedButton(
                   onPressed: () {
                     // Sua ação
@@ -33,21 +37,25 @@ class _TelaMenu extends State<TelaMenu> {
                         width: 4,
                       ),
                     ),
+                    minimumSize: const Size(200, 60),
                   ),
                   child: const Text(
                     'TRIAGEM',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 16,
                     ),
                   ),
                 ),
               ],
             ),
+
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/imagem.png', width: 100),
+                Image.asset('assets/enfermaria.png', width: 100),
+                const SizedBox(width: 35),
                 ElevatedButton(
                   onPressed: () {
                     // Sua ação
@@ -61,24 +69,28 @@ class _TelaMenu extends State<TelaMenu> {
                         width: 4,
                       ),
                     ),
+                    minimumSize: const Size(200, 60),
                   ),
                   child: const Text(
-                    'TRIAGEM',
+                    'EMFERMARIA',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 16,
                     ),
                   ),
                 ),
               ],
             ),
+
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/imagem.png', width: 100),
+                Image.asset('assets/caixinha.png', width: 100),
+                const SizedBox(width: 55),
                 ElevatedButton(
                   onPressed: () {
-                    // Sua ação
+
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF7cb2d6),
@@ -89,12 +101,13 @@ class _TelaMenu extends State<TelaMenu> {
                         width: 4,
                       ),
                     ),
+                    minimumSize: const Size(100, 60),
                   ),
                   child: const Text(
-                    'TRIAGEM',
+                    'CAIXINHA DE REMÉDIO',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 16,
                     ),
                   ),
                 ),
@@ -104,10 +117,11 @@ class _TelaMenu extends State<TelaMenu> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/imagem.png', width: 100),
+                Image.asset('assets/uti.png', width: 100),
+                const SizedBox(width: 50),
                 ElevatedButton(
                   onPressed: () {
-                    // Sua ação
+
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF7cb2d6),
@@ -118,31 +132,49 @@ class _TelaMenu extends State<TelaMenu> {
                         width: 4,
                       ),
                     ),
+                    minimumSize: const Size(200, 60),
                   ),
                   child: const Text(
-                    'TRIAGEM',
+                    'UTI',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 16,
                     ),
                   ),
                 ),
               ],
             ),
 
-            SizedBox(height: 16),
-            SizedBox(height: 16),
-            SizedBox(height: 16),
-            SizedBox(height: 25),
+            const SizedBox(height: 50),
+
+            const Text(
+              'AQUI VOCÊ ESCOLHE ONDE DESEJA EXPLORAR...',
+              style: TextStyle(
+                fontSize: 18,
+                color: Color(0xFF7cb2d6),
+                fontWeight: FontWeight.w500,
+                letterSpacing: 1.2,
+              ),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
     );
   }
 
-  AppBar buildappbar() {
+buildappbar() {
     return AppBar(
-      actions: [],
+      actions: [
+        Container(
+          margin: const EdgeInsets.only(right: 30.0),
+          child: Icon(
+            Icons.home,
+            size: 40,
+            color: Colors.white,
+          ),
+        ),
+      ],
       toolbarHeight: 100,
       centerTitle: true,
       backgroundColor: const Color(0xFF7cb2d6),
