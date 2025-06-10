@@ -87,7 +87,7 @@ class _TelaMenu extends State<TelaMenu> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('assets/caixinha.png', width: 100),
-                const SizedBox(width: 55),
+                const SizedBox(width: 50),
                 ElevatedButton(
                   onPressed: () {
 
@@ -163,7 +163,7 @@ class _TelaMenu extends State<TelaMenu> {
     );
   }
 
-buildappbar() {
+  buildappbar() {
     return AppBar(
       actions: [
         Container(
@@ -179,7 +179,7 @@ buildappbar() {
       centerTitle: true,
       backgroundColor: const Color(0xFF7cb2d6),
       title: const Text(
-        'InfoClin',
+        'INFOCLIN',
         style: TextStyle(
           fontSize: 32,
           fontFamily: 'Carrois Gothic SC',
